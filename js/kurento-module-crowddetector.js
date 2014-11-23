@@ -44,6 +44,30 @@ function CrowdDetectorFilter(){
 inherits(CrowdDetectorFilter, Filter);
 
 /**
+ * The processing image will be resized to this width (in pixels)
+ *
+ * @alias module:crowddetector.CrowdDetectorFilter#getProcessingWidth
+ *
+ * @param {module:crowddetector.CrowdDetectorFilter~getProcessingWidthCallback} [callback]
+ *
+ * @return {external:Promise}
+ */
+CrowdDetectorFilter.prototype.getProcessingWidth = function(callback){
+  var transaction = (arguments[0] instanceof Transaction)
+                  ? Array.prototype.shift.apply(arguments)
+                  : undefined;
+
+  if(!arguments.length) callback = undefined;
+
+  return this._invoke(transaction, 'getProcessingWidth', callback);
+};
+/**
+ * @callback module:crowddetector.CrowdDetectorFilter~getProcessingWidthCallback
+ * @param {external:Error} error
+ * @param {external:Integer} result
+ */
+
+/**
  * @alias module:crowddetector.CrowdDetectorFilter.constructorParams
  *
  * @property {module:core.MediaPipeline} mediaPipeline
