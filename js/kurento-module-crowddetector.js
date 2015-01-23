@@ -22,6 +22,8 @@ var kurentoClient = require('kurento-client');
 
 var ChecktypeError = kurentoClient.checkType.ChecktypeError;
 
+var Transaction = kurentoClient.TransactionsManager.Transaction;
+
 var Filter = kurentoClient.register.abstracts.Filter;
 
 /**
