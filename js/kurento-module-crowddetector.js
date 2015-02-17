@@ -32,7 +32,7 @@ var Filter = kurentoClient.register.abstracts.Filter;
  * @classdesc
  *  Filter that detects people agglomeration in video streams
  *
- * @extends module:corecore/abstracts.Filter
+ * @extends module:core/abstracts.Filter
  *
  * @constructor module:crowddetector.CrowdDetectorFilter
  *
@@ -94,7 +94,7 @@ CrowdDetectorFilter.constructorParams = {
 /**
  * @alias module:crowddetector.CrowdDetectorFilter.events
  *
- * @extend module:corecore/abstracts.Filter.events
+ * @extends module:core/abstracts.Filter.events
  */
 CrowdDetectorFilter.events = Filter.events.concat(['CrowdDetectorDirection', 'CrowdDetectorFluidity', 'CrowdDetectorOccupancy']);
 
