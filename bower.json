@@ -1,15 +1,25 @@
 {
-  "authors": [
-    "Kurento <info@kurento.com> (http://kurento.org)"
-  ],
   "name": "kurento-module-crowddetector",
-  "version": "6.0.0-dev",
   "description": "Crowd Detector Filter",
   "license": "LGPL",
-  "homepage": "http://www.kurento.com",
   "keywords": [
     "Kurento",
     "module",
     "plugin"
-  ]
+  ],
+  "homepage": "http://www.kurento.com",
+  "repository": {
+    "type": "git",
+    "url": "Kurento/kurento-module-crowddetector-js"
+  },
+  "authors": [
+    "Kurento <info@kurento.com> (http://kurento.org)"
+  ],
+  "ignore": [
+    "doc/",
+    "lib/",
+    "Gruntfile.js",
+    "package.json"
+  ],
+  "main": "dist/kurento-module-crowddetector.js"
 }

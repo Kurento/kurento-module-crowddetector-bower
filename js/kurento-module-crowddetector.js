@@ -20,7 +20,8 @@ var inherits = require('inherits');
 
 var kurentoClient = require('kurento-client');
 
-var ChecktypeError = kurentoClient.checkType.ChecktypeError;
+var checkType      = kurentoClient.checkType;
+var ChecktypeError = checkType.ChecktypeError;
 
 var Transaction = kurentoClient.TransactionsManager.Transaction;
 
