@@ -4,16 +4,15 @@ require=(function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof requ
 /*
  * (C) Copyright 2013-2015 Kurento (http://kurento.org/)
  *
- * All rights reserved. This program and the accompanying materials
- * are made available under the terms of the GNU Lesser General Public License
- * (LGPL) version 2.1 which accompanies this distribution, and is available at
+ * All rights reserved. This program and the accompanying materials are made
+ * available under the terms of the GNU Lesser General Public License (LGPL)
+ * version 2.1 which accompanies this distribution, and is available at
  * http://www.gnu.org/licenses/lgpl-2.1.html
  *
- * This library is distributed in the hope that it will be useful,
- * but WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
- * Lesser General Public License for more details.
- *
+ * This library is distributed in the hope that it will be useful, but WITHOUT
+ * ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
+ * FOR A PARTICULAR PURPOSE. See the GNU Lesser General Public License for more
+ * details.
  */
 
 var inherits = require('inherits');
@@ -98,12 +97,13 @@ CrowdDetectorFilter.prototype.setProcessingWidth = function(processingWidth, cal
                   ? Array.prototype.shift.apply(arguments)
                   : undefined;
 
-  checkType('int', 'processingWidth', processingWidth, {required: true}
-);
+  checkType('int', 'processingWidth', processingWidth, {required: true});
 
   var params = {
-    processingWidth: processingWidth,
+    processingWidth: processingWidth
   };
+
+  callback = (callback || noop).bind(this)
 
   return this._invoke(transaction, 'setProcessingWidth', params, callback);
 };
@@ -116,13 +116,11 @@ CrowdDetectorFilter.prototype.setProcessingWidth = function(processingWidth, cal
 /**
  * @alias module:crowddetector.CrowdDetectorFilter.constructorParams
  *
- * @property   {module:core.MediaPipeline} mediaPipeline
-
+ * @property {module:core.MediaPipeline} mediaPipeline
  *  the {@link module:core.MediaPipeline MediaPipeline} to which the filter 
  *  belongs
  *
- * @property   {module:crowddetector/complexTypes.RegionOfInterest}[] rois
-
+ * @property {module:crowddetector/complexTypes.RegionOfInterest}[] rois
  *  Regions of interest for the filter
  */
 CrowdDetectorFilter.constructorParams = {
@@ -134,7 +132,7 @@ CrowdDetectorFilter.constructorParams = {
     type: 'RegionOfInterest',
     isArray: true,
     required: true
-  },
+  }
 };
 
 /**
@@ -177,16 +175,15 @@ require('.');
 /*
  * (C) Copyright 2013-2015 Kurento (http://kurento.org/)
  *
- * All rights reserved. This program and the accompanying materials
- * are made available under the terms of the GNU Lesser General Public License
- * (LGPL) version 2.1 which accompanies this distribution, and is available at
+ * All rights reserved. This program and the accompanying materials are made
+ * available under the terms of the GNU Lesser General Public License (LGPL)
+ * version 2.1 which accompanies this distribution, and is available at
  * http://www.gnu.org/licenses/lgpl-2.1.html
  *
- * This library is distributed in the hope that it will be useful,
- * but WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
- * Lesser General Public License for more details.
- *
+ * This library is distributed in the hope that it will be useful, but WITHOUT
+ * ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
+ * FOR A PARTICULAR PURPOSE. See the GNU Lesser General Public License for more
+ * details.
  */
 
 var inherits = require('inherits');
@@ -217,12 +214,9 @@ function RegionOfInterest(regionOfInterestDict){
     return new RegionOfInterest(regionOfInterestDict)
 
   // Check regionOfInterestDict has the required fields
-  checkType('RelativePoint', 'regionOfInterestDict.points', regionOfInterestDict.points, {isArray: true, required: true}
-);
-  checkType('RegionOfInterestConfig', 'regionOfInterestDict.regionOfInterestConfig', regionOfInterestDict.regionOfInterestConfig, {required: true}
-);
-  checkType('String', 'regionOfInterestDict.id', regionOfInterestDict.id, {required: true}
-);
+  checkType('RelativePoint', 'regionOfInterestDict.points', regionOfInterestDict.points, {isArray: true, required: true});
+  checkType('RegionOfInterestConfig', 'regionOfInterestDict.regionOfInterestConfig', regionOfInterestDict.regionOfInterestConfig, {required: true});
+  checkType('String', 'regionOfInterestDict.id', regionOfInterestDict.id, {required: true});
 
   // Init parent class
   RegionOfInterest.super_.call(this, regionOfInterestDict)
@@ -286,16 +280,15 @@ RegionOfInterest.check = checkRegionOfInterest;
 /*
  * (C) Copyright 2013-2015 Kurento (http://kurento.org/)
  *
- * All rights reserved. This program and the accompanying materials
- * are made available under the terms of the GNU Lesser General Public License
- * (LGPL) version 2.1 which accompanies this distribution, and is available at
+ * All rights reserved. This program and the accompanying materials are made
+ * available under the terms of the GNU Lesser General Public License (LGPL)
+ * version 2.1 which accompanies this distribution, and is available at
  * http://www.gnu.org/licenses/lgpl-2.1.html
  *
- * This library is distributed in the hope that it will be useful,
- * but WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
- * Lesser General Public License for more details.
- *
+ * This library is distributed in the hope that it will be useful, but WITHOUT
+ * ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
+ * FOR A PARTICULAR PURPOSE. See the GNU Lesser General Public License for more
+ * details.
  */
 
 var inherits = require('inherits');
@@ -478,16 +471,15 @@ RegionOfInterestConfig.check = checkRegionOfInterestConfig;
 /*
  * (C) Copyright 2013-2015 Kurento (http://kurento.org/)
  *
- * All rights reserved. This program and the accompanying materials
- * are made available under the terms of the GNU Lesser General Public License
- * (LGPL) version 2.1 which accompanies this distribution, and is available at
+ * All rights reserved. This program and the accompanying materials are made
+ * available under the terms of the GNU Lesser General Public License (LGPL)
+ * version 2.1 which accompanies this distribution, and is available at
  * http://www.gnu.org/licenses/lgpl-2.1.html
  *
- * This library is distributed in the hope that it will be useful,
- * but WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
- * Lesser General Public License for more details.
- *
+ * This library is distributed in the hope that it will be useful, but WITHOUT
+ * ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
+ * FOR A PARTICULAR PURPOSE. See the GNU Lesser General Public License for more
+ * details.
  */
 
 var inherits = require('inherits');
@@ -516,10 +508,8 @@ function RelativePoint(relativePointDict){
     return new RelativePoint(relativePointDict)
 
   // Check relativePointDict has the required fields
-  checkType('float', 'relativePointDict.x', relativePointDict.x, {required: true}
-);
-  checkType('float', 'relativePointDict.y', relativePointDict.y, {required: true}
-);
+  checkType('float', 'relativePointDict.x', relativePointDict.x, {required: true});
+  checkType('float', 'relativePointDict.y', relativePointDict.y, {required: true});
 
   // Init parent class
   RelativePoint.super_.call(this, relativePointDict)
@@ -578,16 +568,15 @@ RelativePoint.check = checkRelativePoint;
 /*
  * (C) Copyright 2013-2015 Kurento (http://kurento.org/)
  *
- * All rights reserved. This program and the accompanying materials
- * are made available under the terms of the GNU Lesser General Public License
- * (LGPL) version 2.1 which accompanies this distribution, and is available at
+ * All rights reserved. This program and the accompanying materials are made
+ * available under the terms of the GNU Lesser General Public License (LGPL)
+ * version 2.1 which accompanies this distribution, and is available at
  * http://www.gnu.org/licenses/lgpl-2.1.html
  *
- * This library is distributed in the hope that it will be useful,
- * but WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
- * Lesser General Public License for more details.
- *
+ * This library is distributed in the hope that it will be useful, but WITHOUT
+ * ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
+ * FOR A PARTICULAR PURPOSE. See the GNU Lesser General Public License for more
+ * details.
  */
 
 /**
@@ -614,16 +603,15 @@ exports.RelativePoint = RelativePoint;
 /*
  * (C) Copyright 2013-2015 Kurento (http://kurento.org/)
  *
- * All rights reserved. This program and the accompanying materials
- * are made available under the terms of the GNU Lesser General Public License
- * (LGPL) version 2.1 which accompanies this distribution, and is available at
+ * All rights reserved. This program and the accompanying materials are made
+ * available under the terms of the GNU Lesser General Public License (LGPL)
+ * version 2.1 which accompanies this distribution, and is available at
  * http://www.gnu.org/licenses/lgpl-2.1.html
  *
- * This library is distributed in the hope that it will be useful,
- * but WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
- * Lesser General Public License for more details.
- *
+ * This library is distributed in the hope that it will be useful, but WITHOUT
+ * ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
+ * FOR A PARTICULAR PURPOSE. See the GNU Lesser General Public License for more
+ * details.
  */
 
 /**
