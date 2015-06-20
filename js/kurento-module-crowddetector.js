@@ -215,6 +215,8 @@ function RegionOfInterest(regionOfInterestDict){
   if(!(this instanceof RegionOfInterest))
     return new RegionOfInterest(regionOfInterestDict)
 
+  regionOfInterestDict = regionOfInterestDict || {}
+
   // Check regionOfInterestDict has the required fields
   checkType('RelativePoint', 'regionOfInterestDict.points', regionOfInterestDict.points, {isArray: true, required: true});
   checkType('RegionOfInterestConfig', 'regionOfInterestDict.regionOfInterestConfig', regionOfInterestDict.regionOfInterestConfig, {required: true});
@@ -351,6 +353,8 @@ var ComplexType = kurentoClient.register.complexTypes.ComplexType;
 function RegionOfInterestConfig(regionOfInterestConfigDict){
   if(!(this instanceof RegionOfInterestConfig))
     return new RegionOfInterestConfig(regionOfInterestConfigDict)
+
+  regionOfInterestConfigDict = regionOfInterestConfigDict || {}
 
   // Check regionOfInterestConfigDict has the required fields
   checkType('int', 'regionOfInterestConfigDict.occupancyLevelMin', regionOfInterestConfigDict.occupancyLevelMin);
@@ -508,6 +512,8 @@ var ComplexType = kurentoClient.register.complexTypes.ComplexType;
 function RelativePoint(relativePointDict){
   if(!(this instanceof RelativePoint))
     return new RelativePoint(relativePointDict)
+
+  relativePointDict = relativePointDict || {}
 
   // Check relativePointDict has the required fields
   checkType('float', 'relativePointDict.x', relativePointDict.x, {required: true});
