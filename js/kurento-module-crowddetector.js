@@ -19,8 +19,11 @@ var inherits = require('inherits');
 
 var kurentoClient = require('kurento-client');
 
+var disguise = kurentoClient.disguise;
+
 var checkType      = kurentoClient.checkType;
 var ChecktypeError = checkType.ChecktypeError;
+
 
 var Transaction = kurentoClient.TransactionsManager.Transaction;
 
@@ -76,7 +79,7 @@ CrowdDetectorFilter.prototype.getProcessingWidth = function(callback){
 
   callback = (callback || noop).bind(this)
 
-  return this._invoke(transaction, 'getProcessingWidth', callback);
+  return disguise(this._invoke(transaction, 'getProcessingWidth', callback), this)
 };
 /**
  * @callback module:crowddetector.CrowdDetectorFilter~getProcessingWidthCallback
@@ -107,7 +110,7 @@ CrowdDetectorFilter.prototype.setProcessingWidth = function(processingWidth, cal
 
   callback = (callback || noop).bind(this)
 
-  return this._invoke(transaction, 'setProcessingWidth', params, callback);
+  return disguise(this._invoke(transaction, 'setProcessingWidth', params, callback), this)
 };
 /**
  * @callback module:crowddetector.CrowdDetectorFilter~setProcessingWidthCallback
