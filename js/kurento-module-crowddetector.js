@@ -635,7 +635,7 @@ exports.RelativePoint = RelativePoint;
  */
 
 Object.defineProperty(exports, 'name',    {value: 'crowddetector'});
-Object.defineProperty(exports, 'version', {value: '6.0.1-dev'});
+Object.defineProperty(exports, 'version', {value: '6.0.0'});
 
 
 var CrowdDetectorFilter = require('./CrowdDetectorFilter');
