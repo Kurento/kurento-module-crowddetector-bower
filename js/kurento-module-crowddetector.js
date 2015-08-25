@@ -149,7 +149,7 @@ CrowdDetectorFilter.events = Filter.events.concat(['CrowdDetectorDirection', 'Cr
 
 
 /**
- * Checker for {@link crowddetector.CrowdDetectorFilter}
+ * Checker for {@link module:crowddetector.CrowdDetectorFilter}
  *
  * @memberof module:crowddetector
  *
@@ -263,7 +263,7 @@ Object.defineProperties(RegionOfInterest.prototype, {
 })
 
 /**
- * Checker for {@link crowddetector/complexTypes.RegionOfInterest}
+ * Checker for {@link module:crowddetector/complexTypes.RegionOfInterest}
  *
  * @memberof module:crowddetector/complexTypes
  *
@@ -456,7 +456,7 @@ Object.defineProperties(RegionOfInterestConfig.prototype, {
 })
 
 /**
- * Checker for {@link crowddetector/complexTypes.RegionOfInterestConfig}
+ * Checker for {@link module:crowddetector/complexTypes.RegionOfInterestConfig}
  *
  * @memberof module:crowddetector/complexTypes
  *
@@ -555,7 +555,7 @@ Object.defineProperties(RelativePoint.prototype, {
 })
 
 /**
- * Checker for {@link crowddetector/complexTypes.RelativePoint}
+ * Checker for {@link module:crowddetector/complexTypes.RelativePoint}
  *
  * @memberof module:crowddetector/complexTypes
  *
