@@ -110,7 +110,9 @@ CrowdDetectorFilter.prototype.setProcessingWidth = function(processingWidth, cal
                   ? Array.prototype.shift.apply(arguments)
                   : undefined;
 
-  checkType('int', 'processingWidth', processingWidth, {required: true});
+  //  
+  // checkType('int', 'processingWidth', processingWidth, {required: true});
+  //  
 
   var params = {
     processingWidth: processingWidth
@@ -231,9 +233,13 @@ function RegionOfInterest(regionOfInterestDict){
   regionOfInterestDict = regionOfInterestDict || {}
 
   // Check regionOfInterestDict has the required fields
-  checkType('RelativePoint', 'regionOfInterestDict.points', regionOfInterestDict.points, {isArray: true, required: true});
-  checkType('RegionOfInterestConfig', 'regionOfInterestDict.regionOfInterestConfig', regionOfInterestDict.regionOfInterestConfig, {required: true});
-  checkType('String', 'regionOfInterestDict.id', regionOfInterestDict.id, {required: true});
+  // 
+  // checkType('RelativePoint', 'regionOfInterestDict.points', regionOfInterestDict.points, {isArray: true, required: true});
+  //  
+  // checkType('RegionOfInterestConfig', 'regionOfInterestDict.regionOfInterestConfig', regionOfInterestDict.regionOfInterestConfig, {required: true});
+  //  
+  // checkType('String', 'regionOfInterestDict.id', regionOfInterestDict.id, {required: true});
+  //  
 
   // Init parent class
   RegionOfInterest.super_.call(this, regionOfInterestDict)
@@ -372,18 +378,31 @@ function RegionOfInterestConfig(regionOfInterestConfigDict){
   regionOfInterestConfigDict = regionOfInterestConfigDict || {}
 
   // Check regionOfInterestConfigDict has the required fields
-  checkType('int', 'regionOfInterestConfigDict.occupancyLevelMin', regionOfInterestConfigDict.occupancyLevelMin);
-  checkType('int', 'regionOfInterestConfigDict.occupancyLevelMed', regionOfInterestConfigDict.occupancyLevelMed);
-  checkType('int', 'regionOfInterestConfigDict.occupancyLevelMax', regionOfInterestConfigDict.occupancyLevelMax);
-  checkType('int', 'regionOfInterestConfigDict.occupancyNumFramesToEvent', regionOfInterestConfigDict.occupancyNumFramesToEvent);
-  checkType('int', 'regionOfInterestConfigDict.fluidityLevelMin', regionOfInterestConfigDict.fluidityLevelMin);
-  checkType('int', 'regionOfInterestConfigDict.fluidityLevelMed', regionOfInterestConfigDict.fluidityLevelMed);
-  checkType('int', 'regionOfInterestConfigDict.fluidityLevelMax', regionOfInterestConfigDict.fluidityLevelMax);
-  checkType('int', 'regionOfInterestConfigDict.fluidityNumFramesToEvent', regionOfInterestConfigDict.fluidityNumFramesToEvent);
-  checkType('boolean', 'regionOfInterestConfigDict.sendOpticalFlowEvent', regionOfInterestConfigDict.sendOpticalFlowEvent);
-  checkType('int', 'regionOfInterestConfigDict.opticalFlowNumFramesToEvent', regionOfInterestConfigDict.opticalFlowNumFramesToEvent);
-  checkType('int', 'regionOfInterestConfigDict.opticalFlowNumFramesToReset', regionOfInterestConfigDict.opticalFlowNumFramesToReset);
-  checkType('int', 'regionOfInterestConfigDict.opticalFlowAngleOffset', regionOfInterestConfigDict.opticalFlowAngleOffset);
+  // 
+  // checkType('int', 'regionOfInterestConfigDict.occupancyLevelMin', regionOfInterestConfigDict.occupancyLevelMin);
+  //  
+  // checkType('int', 'regionOfInterestConfigDict.occupancyLevelMed', regionOfInterestConfigDict.occupancyLevelMed);
+  //  
+  // checkType('int', 'regionOfInterestConfigDict.occupancyLevelMax', regionOfInterestConfigDict.occupancyLevelMax);
+  //  
+  // checkType('int', 'regionOfInterestConfigDict.occupancyNumFramesToEvent', regionOfInterestConfigDict.occupancyNumFramesToEvent);
+  //  
+  // checkType('int', 'regionOfInterestConfigDict.fluidityLevelMin', regionOfInterestConfigDict.fluidityLevelMin);
+  //  
+  // checkType('int', 'regionOfInterestConfigDict.fluidityLevelMed', regionOfInterestConfigDict.fluidityLevelMed);
+  //  
+  // checkType('int', 'regionOfInterestConfigDict.fluidityLevelMax', regionOfInterestConfigDict.fluidityLevelMax);
+  //  
+  // checkType('int', 'regionOfInterestConfigDict.fluidityNumFramesToEvent', regionOfInterestConfigDict.fluidityNumFramesToEvent);
+  //  
+  // checkType('boolean', 'regionOfInterestConfigDict.sendOpticalFlowEvent', regionOfInterestConfigDict.sendOpticalFlowEvent);
+  //  
+  // checkType('int', 'regionOfInterestConfigDict.opticalFlowNumFramesToEvent', regionOfInterestConfigDict.opticalFlowNumFramesToEvent);
+  //  
+  // checkType('int', 'regionOfInterestConfigDict.opticalFlowNumFramesToReset', regionOfInterestConfigDict.opticalFlowNumFramesToReset);
+  //  
+  // checkType('int', 'regionOfInterestConfigDict.opticalFlowAngleOffset', regionOfInterestConfigDict.opticalFlowAngleOffset);
+  //  
 
   // Init parent class
   RegionOfInterestConfig.super_.call(this, regionOfInterestConfigDict)
@@ -533,8 +552,11 @@ function RelativePoint(relativePointDict){
   relativePointDict = relativePointDict || {}
 
   // Check relativePointDict has the required fields
-  checkType('float', 'relativePointDict.x', relativePointDict.x, {required: true});
-  checkType('float', 'relativePointDict.y', relativePointDict.y, {required: true});
+  // 
+  // checkType('float', 'relativePointDict.x', relativePointDict.x, {required: true});
+  //  
+  // checkType('float', 'relativePointDict.y', relativePointDict.y, {required: true});
+  //  
 
   // Init parent class
   RelativePoint.super_.call(this, relativePointDict)
