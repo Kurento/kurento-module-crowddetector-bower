@@ -1,6 +1,6 @@
 {
   "name": "kurento-module-crowddetector",
-  "description": "Crowd Detector Filter",
+  "description": "JavaScript Client API for Kurento Media Server",
   "license": "ALv2",
   "keywords": [
     "Kurento",
@@ -10,7 +10,7 @@
   "homepage": "http://www.kurento.com",
   "repository": {
     "type": "git",
-    "url": "Kurento/kurento-module-crowddetector-js"
+    "url": "https://github.com/Kurento/kurento-module-crowddetector-js.git"
   },
   "authors": [
     "Kurento <info@kurento.com> (http://kurento.org)"

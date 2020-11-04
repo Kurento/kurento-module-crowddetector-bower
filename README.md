@@ -13,7 +13,7 @@ kurento-module-crowddetector-bower
 This repository host the auto-generated JavaScript client for [Kurento]
 module "crowddetector" to be published in [Bower].
 
-Module "crowddetector" description: Crowd Detector Filter
+Module "crowddetector" description: JavaScript Client API for Kurento Media Server
 
 What is Kurento
 ---------------
