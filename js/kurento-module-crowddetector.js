@@ -40,7 +40,7 @@ function noop(error, result) {
 
 
 /**
- * Create a {@link module:crowddetector.CrowdDetectorFilter CrowdDetectorFilter}
+ * Create a {@link CrowdDetectorFilter}
  *
  * @classdesc
  *  Filter that detects people agglomeration in video streams
@@ -132,8 +132,7 @@ CrowdDetectorFilter.prototype.setProcessingWidth = function(processingWidth, cal
  * @alias module:crowddetector.CrowdDetectorFilter.constructorParams
  *
  * @property {module:core.MediaPipeline} mediaPipeline
- *  the {@link module:core.MediaPipeline MediaPipeline} to which the filter 
- *  belongs
+ *  the {@link MediaPipeline} to which the filter belongs
  *
  * @property {module:crowddetector/complexTypes.RegionOfInterest}[] rois
  *  Regions of interest for the filter
