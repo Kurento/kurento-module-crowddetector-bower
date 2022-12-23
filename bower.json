@@ -7,13 +7,13 @@
     "module",
     "plugin"
   ],
-  "homepage": "http://www.kurento.com",
+  "homepage": "https://kurento.openvidu.io/",
   "repository": {
     "type": "git",
     "url": "https://github.com/Kurento/kurento-module-crowddetector-js.git"
   },
   "authors": [
-    "Kurento <info@kurento.com> (http://kurento.org)"
+    "Kurento <kurento@openvidu.io> (https://kurento.openvidu.io/)"
   ],
   "ignore": [
     "doc/",
